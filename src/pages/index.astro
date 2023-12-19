@@ -1,0 +1,33 @@
+---
+	import '../styling/styles.scss'
+	import Header from '../components/Header.astro'
+	import Settings from '../components/Settings.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="images/house.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Infinite Metropolis</title>
+	</head>
+	<body>
+		<div id="gameHolder" class="flexRow">
+			<div id="navBar" class="flexCol"></div>
+			<div id="mainContentHolder" class="flexCol">
+				<Header />
+				<Settings />
+			</div>
+		</div>
+	</body>
+	<!-- Internals -->
+	<script is:inline src="scripts/internal/BreakEternity.js"></script>
+	<script is:inline src="scripts/internal/cache.js"></script>
+	<script is:inline src="scripts/internal/formatting.js"></script>
+	<script is:inline src="scripts/internal/utilities.js"></script>
+	<script is:inline src="scripts/internal/modalmanager.js"></script>
+	<!-- Game Scripts -->
+	<script is:inline src="scripts/data.js"></script>
+	<script is:inline src="scripts/main.js"></script>
+</html>
